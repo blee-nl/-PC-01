@@ -1,0 +1,33 @@
+{
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react",
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    [
+      "babel-plugin-root-import",
+      {
+        "paths": [
+          {
+            "rootPathPrefix": "~",
+            "rootPathSuffix": "./src"
+          },
+          {
+            "rootPathPrefix": "api",
+            "rootPathSuffix": "./api"
+          },
+          {
+            "rootPathPrefix": "helpers",
+            "rootPathSuffix": "./helpers"
+          }
+        ]
+      }
+    ],
+    ["@babel/plugin-transform-runtime",
+      {
+        "regenerator": true
+      }
+    ]
+  ]
+}
