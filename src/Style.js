@@ -33,9 +33,19 @@ const theme = {
 
 const colors = {
   orange: "#f6a80",
-  cream: "#faf7f3",
+  cream: "#cecbcb",
   daryGray: "#635f5c",
   blue: "#007eff",
 };
 
-export { GlobalStyle, theme, colors };
+const screen = {
+  xlarge: "1440px",
+  large: "1220px",
+  default: "1024px",
+  medium: "768px",
+  semiSmall: "640px",
+  small: "480px",
+  xsmall: "320px",
+};
+
+export { GlobalStyle, theme, colors, screen };

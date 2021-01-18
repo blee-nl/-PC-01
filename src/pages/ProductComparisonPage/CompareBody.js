@@ -27,7 +27,12 @@ const listToNotHighlight = [
   "uom",
 ];
 
-const CompareBody = ({ productIds, productsInfo, productInfoKeys }) => (
+const CompareBody = ({
+  productIds,
+  productsInfo,
+  productInfoKeys,
+  numberOfCloumn,
+}) => (
   <div className="comparison-list-body">
     {productInfoKeys.map((productInfoKey) => {
       const hasDifferentValue = checkObjOfObtKeyValueDifference(
@@ -46,34 +51,36 @@ const CompareBody = ({ productIds, productsInfo, productInfoKeys }) => (
           <div className="list-title">
             <div className="value">{capitalCase(productInfoKey)}</div>
           </div>
-          {productIds.map((productId) => {
-            let value = productsInfo[productId][productInfoKey];
-            //badges section is set of icons to show
-            //badges value is string and has multiple image urls
-            //if icons has values , it will return array of image url strings or flase
-            const icons =
-              productInfoKey === "badges" &&
-              value &&
-              getimageLinkArray(value).length > 0
-                ? getimageLinkArray(value)
-                : false;
+          <div className="list-cell-row">
+            {productIds.map((productId) => {
+              let value = productsInfo[productId][productInfoKey];
+              //badges section is set of icons to show
+              //badges value is string and has multiple image urls
+              //if icons has values , it will return array of image url strings or flase
+              const icons =
+                productInfoKey === "badges" &&
+                value &&
+                getimageLinkArray(value).length > 0
+                  ? getimageLinkArray(value)
+                  : false;
 
-            return (
-              <div className="list-cell" key={productId}>
-                <div className={classNames("value", { badges: icons })}>
-                  {!icons && getDisplayValue(value)}
-                  {icons &&
-                    icons.map((iconUrl, index) => (
-                      <img
-                        key={productInfoKey + index}
-                        src={iconUrl}
-                        alt="img"
-                      />
-                    ))}
+              return (
+                <div className="list-cell" key={productId}>
+                  <div className={classNames("value", { badges: icons })}>
+                    {!icons && getDisplayValue(value)}
+                    {icons &&
+                      icons.map((iconUrl, index) => (
+                        <img
+                          key={productInfoKey + index}
+                          src={iconUrl}
+                          alt="img"
+                        />
+                      ))}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       );
     })}
