@@ -15,8 +15,15 @@ const ProductComparisonPageWrapper = styled.div`
   }
   .compare-wrapper {
     @media screen and (max-width: ${screen.medium}) {
-      overflow-x: scroll;
+      /*   
+           TODO: there is an issue to scroll x 
+           need to invest more time to fix this style 
+           currently, small screen ,disabled sticky head 
+      */
       width: fit-content;
+      .floating {
+        position: relative;
+      }
     }
     .header-block {
       border-bottom: 1px solid #d8d8d8;
