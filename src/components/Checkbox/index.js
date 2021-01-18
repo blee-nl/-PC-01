@@ -5,14 +5,13 @@ import { FaCheck } from "react-icons/fa";
 import CheckboxWrapper from "./CheckboxWrapper";
 
 const Checkbox = ({ checked, onChange, label, id, disabled }) => {
-
   const onClick = (e) => {
     e.preventDefault();
     if (!disabled) {
       onChange(id);
     }
   };
-  
+
   return (
     <CheckboxWrapper className="checkbox">
       <button
@@ -22,9 +21,9 @@ const Checkbox = ({ checked, onChange, label, id, disabled }) => {
           disabled: disabled,
         })}
       >
-        {checked && <FaCheck size={10} />}
+        <div className='check-box'>{checked &&  <FaCheck size={10} />} </div> 
+        <label>{label}</label>
       </button>
-      <label>{label}</label>
     </CheckboxWrapper>
   );
 };
