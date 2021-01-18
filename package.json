@@ -32,15 +32,6 @@
     "@babel/preset-react": "^7.12.7",
     "@babel/preset-typescript": "^7.12.7",
     "@babel/runtime": "^7.12.5",
-    "@storybook/addon-actions": "^6.1.11",
-    "@storybook/addon-docs": "^6.1.11",
-    "@storybook/addon-essentials": "^6.1.11",
-    "@storybook/addon-knobs": "^6.1.11",
-    "@storybook/addon-links": "^6.1.11",
-    "@storybook/addon-viewport": "^6.1.11",
-    "@storybook/node-logger": "^6.1.11",
-    "@storybook/preset-create-react-app": "^3.1.5",
-    "@storybook/react": "^6.1.11",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -59,9 +50,7 @@
     "start": "webpack serve --mode development  --hot --inline --open",
     "build": "react-scripts build",
     "test": "jest --no-watchman --config jest.unit.config.js",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
