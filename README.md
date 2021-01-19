@@ -1,7 +1,9 @@
 # Getting Started with product comparison App
 
 This project allows to compare max 4 products and show specifics.
-simple used api :
+App is not allowed to deselect all products on the list. 
+
+Simple api used :
 http://5c35e7f96fc11c0014d32fcd.mockapi.io/compare/products
 
 ## Available Scripts
@@ -53,9 +55,9 @@ And will show coverage summary.
 
 ## Quick overview
 
-  **no.1**
+  **No.1**
   ![Screenshot](overview1.png)
-  **no.2**
+  **No.2**
   ![Screenshot](overview2.png)
 
-## Learn More
+
