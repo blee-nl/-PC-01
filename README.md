@@ -53,9 +53,9 @@ And will show coverage summary.
 
 ## Quick overview
 
-    **no.1**
-    ![Screenshot](overview1.png)
-    **no.2**
-    ![Screenshot](overview2.png)
+  **no.1**
+  ![Screenshot](overview1.png)
+  **no.2**
+  ![Screenshot](overview2.png)
 
 ## Learn More
