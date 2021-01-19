@@ -59,5 +59,10 @@ And will show coverage summary.
   ![Screenshot](overview1.png)
   **No.2**
   ![Screenshot](overview2.png)
-
+  **No.3 - when user selected only 1 product**
+  ![Screenshot](overview3.png)
+  **No.4 - from middle size screen**
+  ![Screenshot](overview4.png) 
+  **No.5 - from middle size screen**
+  ![Screenshot](overview5.png) 
 
