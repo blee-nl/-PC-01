@@ -4,9 +4,9 @@ import { capitalCase } from "capital-case";
 import classNames from "classnames";
 import {
   getimageLinkArray,
-  getDisplayValue,
   checkObjOfObtKeyValueDifference,
 } from "~/helpers";
+import DataCell from "./DataCell";
 
 const listToNotHighlight = [
   "atp",
@@ -31,7 +31,6 @@ const CompareBody = ({
   productIds,
   productsInfo,
   productInfoKeys,
-  numberOfCloumn,
 }) => (
   <div className="comparison-list-body">
     {productInfoKeys.map((productInfoKey) => {
@@ -65,19 +64,7 @@ const CompareBody = ({
                   : false;
 
               return (
-                <div className="list-cell" key={productId}>
-                  <div className={classNames("value", { badges: icons })}>
-                    {!icons && getDisplayValue(value)}
-                    {icons &&
-                      icons.map((iconUrl, index) => (
-                        <img
-                          key={productInfoKey + index}
-                          src={iconUrl}
-                          alt="img"
-                        />
-                      ))}
-                  </div>
-                </div>
+                <DataCell key={productId} icons={icons} value={value} id={productInfoKey}/>
               );
             })}
           </div>

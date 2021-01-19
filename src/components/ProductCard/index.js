@@ -10,7 +10,7 @@ const ProductCard = ({
   product: { name, imageSource, price, id, priceUnit },
   deleteDisable,
 }) => (
-  <ProductCardWrapper className="product-card">
+  <ProductCardWrapper className="product-card" data-testid="product-card">
     {hasControllers && (
       <div className="controllers">
         {!deleteDisable && (
@@ -20,8 +20,9 @@ const ProductCard = ({
               e.preventDefault();
               onDelete(id);
             }}
+            data-testid="remove-button"
           >
-            <FaTrashAlt size={15} />
+            <FaTrashAlt data-testid="remove-button-icon" size={15} />
           </button>
         )}
       </div>

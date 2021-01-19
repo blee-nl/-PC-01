@@ -16,7 +16,7 @@ const CheckboxGroup = ({
     className={classNames("checkbox-group", {
       vertical: direction === "column",
     })}
-  >
+  > 
     {subjects.map((subject) => {
       const actived = currentSelected.indexOf(subject) !== -1;
       const disabled = currentSelected.length === minimumSelection && actived;
@@ -38,6 +38,7 @@ const CheckboxGroup = ({
 
 CheckboxGroup.defaultProps = {
   minimumSelection: 1,
+  subjects:[]
 };
 
 CheckboxGroup.propTypes = {

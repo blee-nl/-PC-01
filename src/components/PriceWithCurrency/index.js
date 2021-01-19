@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export const PriceWithCurrency = ({ price, locale }) => {
+export const PriceWithCurrency = ({ price, locale, currency }) => {
   const maximumFractionDigits = 2;
   const defaultCurrency = "EUR";
   const number = parseFloat(price);
 
   const formattedPrice = number.toLocaleString(locale, {
     style: "currency",
-    currency: defaultCurrency,
+    currency: currency?currency: defaultCurrency,
     maximumFractionDigits,
   });
 
@@ -17,6 +17,7 @@ export const PriceWithCurrency = ({ price, locale }) => {
 
 PriceWithCurrency.propTypes = {
   locale: PropTypes.string,
+  currency: PropTypes.string,
   price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };
 

@@ -9,10 +9,10 @@ const CheckboxWrapper = styled.div`
     background: white;
     border: none;
     display: flex;
-    *:hover {
+    &:hover {
       .check-box {
         background-color: ${colors.blue};
-        color: white;
+        color: ${colors.blue};
       }
     }
     &:focus {
@@ -25,7 +25,7 @@ const CheckboxWrapper = styled.div`
         background: white;
         &:hover {
           background-color: ${colors.blue};
-          color: white;
+          color: ${colors.blue};
         }
       }
     }
@@ -38,6 +38,9 @@ const CheckboxWrapper = styled.div`
           cursor: not-allowed;
         }
       }
+      label:hover {
+        cursor: not-allowed;
+      }
     }
 
     label {
@@ -48,11 +51,11 @@ const CheckboxWrapper = styled.div`
     }
     cursor: pointer;
     .check-box {
-      width: 18px;
+      min-width: 18px;
       height: 18px;
-      margin: 4px 10px 0 5px;
+      margin: 0 10px 0 5px;
       position: relative;
-      color: white;
+      color: #e8e8e8;
       border: 1px solid #d8d8d8;
       background: white;
       box-sizing: border-box;

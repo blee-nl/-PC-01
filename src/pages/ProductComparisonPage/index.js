@@ -7,7 +7,7 @@ import CardList from "./CardList";
 import CompareBody from "./CompareBody";
 
 // products data organiser
-const getOrganisedProducts = (products) => {
+export const getOrganisedProducts = (products) => {
   if (!products || products.length === 0) {
     return {};
   }
@@ -27,7 +27,7 @@ const getOrganisedProducts = (products) => {
   return { parsedProducts, productIds, productInfoKeys };
 };
 
-const ProductComparisonPage = () => {
+export const ProductComparisonPage = () => {
   const [loading, setLoading] = useState(false);
   const [productsData, setProductsData] = useState({});
 
@@ -85,7 +85,7 @@ const ProductComparisonPage = () => {
   return (
     <ProductComparisonPageWrapper numberOfItems={selectedProductIds.length}>
       <div className="title">Compare</div>
-      {loading && <div> loading </div>}
+      {loading && <div data-testid='loading'> Loading.. </div>}
       {showTable && (
         <div className="compare-wrapper">
           <StickyHead className="header-block">

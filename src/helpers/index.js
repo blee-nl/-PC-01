@@ -14,8 +14,9 @@ const getDisplayValue = (value) => {
   }
   return display;
 };
+// need to improve , if value is different type, will return not Equal.
+const checkArrayValuesAllEqual = (valuesArray, ) => {
 
-const checkArrayValuesAllEqual = (valuesArray) => {
   return valuesArray.every((value) => value === valuesArray[0]);
 };
 

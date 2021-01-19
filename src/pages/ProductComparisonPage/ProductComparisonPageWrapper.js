@@ -103,7 +103,7 @@ const ProductComparisonPageWrapper = styled.div`
           flex: 1;
           .value {
             margin: 10px 20px;
-            &.badges {
+            &.icons {
               display: flex;
               flex-wrap: wrap;
               img {
