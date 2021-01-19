@@ -6,7 +6,13 @@ import ProductComparisonPageWrapper from "./ProductComparisonPageWrapper";
 import CardList from "./CardList";
 import CompareBody from "./CompareBody";
 
-// products data organiser
+// Products data organiser :
+// Arg products is an array of objects
+// Return { parsedProducts , productIds, productInfoKeys }
+// parsedProducts is an object of objects . object key is using product Artikelnummer
+// productIds is an Artikelnummer array
+// productInfoKeys is a sorted Array of product information names, filtered out productimage , atp value.
+//  productInfoKeys badges value is the first and other values are alphabatically sorted.
 export const getOrganisedProducts = (products) => {
   if (!products || products.length === 0) {
     return {};
@@ -61,6 +67,8 @@ export const ProductComparisonPage = () => {
   }, []);
 
   const { parsedProducts, productIds, productInfoKeys } = productsData;
+
+  //selectedProductIds is used for cardList and checkbox group
   const [selectedProductIds, setSelectedProductIds] = useState([]);
 
   useEffect(() => {
@@ -69,6 +77,7 @@ export const ProductComparisonPage = () => {
     );
   }, [productsData]);
 
+  // This function allows updatsed selected product id(selectedProductIds)
   const onChange = (id) => {
     const checkboxGroupValue = [...selectedProductIds];
     if (checkboxGroupValue.indexOf(id) === -1) {
@@ -79,13 +88,14 @@ export const ProductComparisonPage = () => {
     setSelectedProductIds(checkboxGroupValue);
   };
 
+  // table will not show when it is loading || not product data
   const showTable =
     !loading && productsData && parsedProducts && productIds && productInfoKeys;
 
   return (
     <ProductComparisonPageWrapper numberOfItems={selectedProductIds.length}>
       <div className="title">Compare</div>
-      {loading && <div data-testid='loading'> Loading.. </div>}
+      {loading && <div data-testid="loading"> Loading.. </div>}
       {showTable && (
         <div className="compare-wrapper">
           <StickyHead className="header-block">
