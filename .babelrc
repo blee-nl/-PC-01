@@ -14,20 +14,20 @@
             "rootPathSuffix": "./src"
           },
           {
-            "rootPathPrefix": "api",
+            "rootPathPrefix": "#",
             "rootPathSuffix": "./api"
-          },
-          {
-            "rootPathPrefix": "helpers",
-            "rootPathSuffix": "./helpers"
           }
         ]
       }
     ],
-    ["@babel/plugin-transform-runtime",
+    [
+      "@babel/plugin-transform-runtime",
       {
         "regenerator": true
       }
+    ],
+    [
+      "@babel/plugin-proposal-optional-chaining"
     ]
   ]
 }

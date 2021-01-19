@@ -8,7 +8,7 @@ module.exports = {
     filename: "bundle.js",
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".jsx", ".scss"],
+    extensions: [".ts", ".tsx", ".js", ".jsx", '.scss'],
   },
   module: {
     rules: [
@@ -36,6 +36,19 @@ module.exports = {
             loader: "file-loader",
           },
         ],
+      },
+      {
+        test: /\.(sass|css|scss)$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
+        include: [
+          path.resolve(__dirname, 'src', 'scss')
+    ],
+      },
+      {
+        test: /\.(woff|woff2)$/,
+        use: {
+          loader: "url-loader",
+        },
       },
     ],
   },
