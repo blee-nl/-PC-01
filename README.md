@@ -42,8 +42,10 @@ And will show coverage summary.
 - [x] Styled components
       **More to improve:Should use more global variable for colors**
 
-- [x] Responsiveness
-      **stick header is not fully working at small devices**
+- [x] Responsiveness 
+      **stick header is not fully working from mediume size devices**
+      **currencly used scroll x and y...**
+      **have to more improve**
 
 - [ ] Browser backward compatibility (IE11)
 
