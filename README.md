@@ -42,7 +42,7 @@ And will show coverage summary.
 - [x] Styled components
       **More to improve:Should use more global variable for colors**
 
-- [x] Responsiveness 
+- [x] Responsiveness
       **stick header is not fully working from mediume size devices**
       **currencly used scroll x and y...**
       **have to more improve**
@@ -52,6 +52,10 @@ And will show coverage summary.
 - [x] Delivery the exercise with a readme file that explains what you have done and how to run your project.
 
 ## Quick overview
-  ![Screenshot](overview1.png)
-  ![Screenshot](overview2.png)
+
+    **no.1**
+    ![Screenshot](overview1.png)
+    **no.2**
+    ![Screenshot](overview2.png)
+
 ## Learn More
